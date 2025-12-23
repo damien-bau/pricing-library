@@ -5,14 +5,10 @@ and Full Truncation Euler Discretisation
 Date: October 2025
 */
 
-//#define _USE_MATH_DEFINES
-
 #include <iostream>
 #include <random>
 #include <cmath>
-//#include <vector>
 
-//using std::vector;
 using std::cout;
 using std::string;
 using std::max;
@@ -30,16 +26,6 @@ struct Parameters{
     int steps, paths;
     string option_type;
 };
-
-/*
-double normalPDF(double x){
-    return 1./(sqrt(2*M_PI))*exp(-0.5*pow(x,2.));
-}
-
-double normalCDF(double x){
-    return 0.5*std::erfc(-x/sqrt(2.));
-}
-*/
 
 void generateCorrelatedNormals(double rho, double& X1, double& X2){
 // Generates two correlated N(0,1) draws with correlation rho
